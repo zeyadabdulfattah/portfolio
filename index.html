@@ -1172,6 +1172,18 @@
           margin: 10px;
         }
       }
+      /* --- FIX FOR UNCLICKABLE PROJECT LINKS --- */
+      .project-links {
+        position: relative; /* Ensure z-index works */
+        z-index: 10; /* Put project links on top of other elements within the card */
+      }
+
+      .project-links a {
+        pointer-events: auto !important; /* Explicitly enable pointer events */
+        position: relative; /* Ensure z-index works on the link itself */
+        z-index: 11; /* Make sure the link is above its parent .project-links if needed */
+      }
+      /* --- END FIX --- */
     </style>
   </head>
   <body>
@@ -1355,116 +1367,141 @@
         </div>
 
         <div class="projects-grid">
-          <!-- Project 1 -->
           <div class="project-card">
             <div class="project-img-container">
               <img
-                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-                alt="E-Commerce Platform"
+                src="aura.png"
+                alt="Aura Clothing Store E-commerce Mockup"
                 class="project-img"
               />
             </div>
             <div class="project-info">
-              <h3 class="project-title">E-Commerce Platform</h3>
+              <h3 class="project-title">Aura Clothing Store</h3>
               <p class="project-description">
-                A modern e-commerce solution built with Next.js and Stripe
-                featuring product management and checkout.
+                A sleek e-commerce store concept for clothing, featuring product
+                listings, filtering, and a user-friendly interface.
               </p>
               <div class="project-tech">
-                <span class="tech-item">Next.js</span>
-                <span class="tech-item">TypeScript</span>
-                <span class="tech-item">Stripe</span>
+                <span class="tech-item">HTML</span>
+                <span class="tech-item">CSS</span>
+                <span class="tech-item">Java Script</span>
               </div>
               <div class="project-links">
-                <a href="#" target="_blank"
-                  ><i class="fas fa-external-link-alt"></i
-                ></a>
-                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                <a
+                  href="https://zeyadabdulfattah.github.io/auraclothingstore/"
+                  target="_blank"
+                  ><i class="fas fa-external-link-alt"></i> Live Demo</a
+                >
+                <a
+                  href="https://github.com/zeyadabdulfattah/auraclothingstore"
+                  target="_blank"
+                  ><i class="fab fa-github"></i> GitHub</a
+                >
               </div>
             </div>
           </div>
 
-          <!-- Project 2 -->
           <div class="project-card">
             <div class="project-img-container">
               <img
-                src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80"
-                alt="Task Management App"
+                src="focusflow.png"
+                alt="FocusFlow SaaS Landing Page"
                 class="project-img"
               />
             </div>
             <div class="project-info">
-              <h3 class="project-title">Task Management App</h3>
+              <h3 class="project-title">FocusFlow SaaS</h3>
               <p class="project-description">
-                A productivity tool with real-time updates and team
-                collaboration features.
+                A modern landing page designed for a SaaS product, highlighting
+                features and benefits with clear calls to action.
               </p>
               <div class="project-tech">
-                <span class="tech-item">React</span>
-                <span class="tech-item">Firebase</span>
-                <span class="tech-item">Material UI</span>
+                <span class="tech-item">HTML</span>
+                <span class="tech-item">CSS</span>
+                <span class="tech-item">Bootstrap</span>
+                <span class="tech-item">Java Script</span>
               </div>
               <div class="project-links">
-                <a href="#" target="_blank"
-                  ><i class="fas fa-external-link-alt"></i
-                ></a>
-                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                <a
+                  href="https://zeyadabdulfattah.github.io/focusflowsaas/"
+                  target="_blank"
+                  ><i class="fas fa-external-link-alt"></i> Live Demo</a
+                >
+                <a
+                  href="https://github.com/zeyadabdulfattah/focusflowsaas.git"
+                  target="_blank"
+                  ><i class="fab fa-github"></i> GitHub</a
+                >
               </div>
             </div>
           </div>
 
-          <!-- Project 3 -->
           <div class="project-card">
             <div class="project-img-container">
               <img
-                src="https://images.unsplash.com/photo-1559028012-481c04fa702d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1636&q=80"
-                alt="Portfolio Template"
+                src="vantafuel.png"
+                alt="Vanta Fuel Supplements Landing Page"
                 class="project-img"
               />
             </div>
             <div class="project-info">
-              <h3 class="project-title">Portfolio Template</h3>
+              <h3 class="project-title">Vanta Fuel Supplements</h3>
               <p class="project-description">
-                An elegant, responsive portfolio template with dark/light mode.
+                A responsive landing page for a fuel supplements brand,
+                showcasing products and key features with a modern design.
               </p>
               <div class="project-tech">
-                <span class="tech-item">HTML/CSS</span>
+                <span class="tech-item">HTML</span>
+                <span class="tech-item">CSS</span>
                 <span class="tech-item">JavaScript</span>
-                <span class="tech-item">GSAP</span>
+                <span class="tech-item">Bootstrap</span>
               </div>
               <div class="project-links">
-                <a href="#" target="_blank"
-                  ><i class="fas fa-external-link-alt"></i
-                ></a>
-                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                <a
+                  href="https://zeyadabdulfattah.github.io/vantafuelsupplements/"
+                  target="_blank"
+                  ><i class="fas fa-external-link-alt"></i> Live Demo</a
+                >
+                <a
+                  href="https://github.com/zeyadabdulfattah/vantafuelsupplements.git"
+                  target="_blank"
+                  ><i class="fab fa-github"></i> GitHub</a
+                >
               </div>
             </div>
           </div>
 
-          <!-- Project 4 -->
           <div class="project-card">
             <div class="project-img-container">
               <img
-                src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-                alt="Analytics Dashboard"
+                src="vantaone.png"
+                alt="Vantaone E-commerce Platform"
                 class="project-img"
               />
             </div>
             <div class="project-info">
-              <h3 class="project-title">Analytics Dashboard</h3>
+              <h3 class="project-title">Vantaone E-commerce</h3>
               <p class="project-description">
-                Data visualization platform with customizable widgets.
+                A fully functional e-commerce platform with product Browse,
+                shopping cart, and checkout functionalities.
               </p>
               <div class="project-tech">
-                <span class="tech-item">D3.js</span>
-                <span class="tech-item">Vue.js</span>
-                <span class="tech-item">Chart.js</span>
+                <span class="tech-item">HTML</span>
+                <span class="tech-item">CSS</span>
+                <span class="tech-item">Java Script</span>
+                <span class="tech-item">Bootstrap</span>
               </div>
               <div class="project-links">
-                <a href="#" target="_blank"
-                  ><i class="fas fa-external-link-alt"></i
-                ></a>
-                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                <a
+                  href="https://zeyadabdulfattah.github.io/vantaone-ecommerce/"
+                  target="_blank"
+                  ><i class="fas fa-external-link-alt"></i> Live Demo</a
+                >
+                <a
+                  href="https://github.com/zeyadabdulfattah/vantaone-ecommerce.git"
+                  target="_blank"
+                  ><i class="fab fa-github"></i> GitHub</a
+                >
               </div>
             </div>
           </div>
@@ -1496,17 +1533,9 @@
                 </div>
                 <div class="contact-detail">
                   <h4>Email</h4>
-                  <a href="mailto:alex@example.com">alex@example.com</a>
-                </div>
-              </div>
-
-              <div class="contact-item">
-                <div class="contact-icon">
-                  <i class="fas fa-phone-alt"></i>
-                </div>
-                <div class="contact-detail">
-                  <h4>Phone</h4>
-                  <a href="tel:+1234567890">+1 (234) 567-890</a>
+                  <a href="mailto:alex@example.com"
+                    >zeyadabdulfattahh@gmail.com</a
+                  >
                 </div>
               </div>
             </div>
@@ -1515,12 +1544,15 @@
               <a href="#" target="_blank"><i class="fab fa-github"></i></a>
               <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
               <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-              <a href="#" target="_blank"><i class="fab fa-upwork"></i></a>
             </div>
           </div>
 
           <div class="contact-form">
-            <form id="contactForm">
+            <form
+              id="contactForm"
+              action="https://formspree.io/f/meokworp"
+              method="POST"
+            >
               <div class="form-group">
                 <label for="name">Your Name</label>
                 <input type="text" id="name" name="name" required />
@@ -1528,13 +1560,19 @@
 
               <div class="form-group">
                 <label for="email">Your Email</label>
-                <input type="email" id="email" name="email" required />
+                <input type="email" id="email" name="_replyto" required />
               </div>
 
               <div class="form-group">
                 <label for="message">Your Message</label>
                 <textarea id="message" name="message" required></textarea>
               </div>
+
+              <input
+                type="hidden"
+                name="_subject"
+                value="New message from your portfolio contact form!"
+              />
 
               <button type="submit" class="submit-btn">Send Message</button>
             </form>
@@ -1560,11 +1598,10 @@
             <a href="#" target="_blank"><i class="fab fa-github"></i></a>
             <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
             <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a href="#" target="_blank"><i class="fab fa-upwork"></i></a>
           </div>
 
           <p class="copyright">
-            Designed & Built by ZeyadAbdulfattah &copy; 2023
+            Designed & Built by ZeyadAbdulfattah &copy; 2025
           </p>
         </div>
       </div>
@@ -1648,18 +1685,6 @@
           top: 0,
           behavior: "smooth",
         });
-      });
-
-      // Form submission
-      const contactForm = document.getElementById("contactForm");
-
-      contactForm.addEventListener("submit", (e) => {
-        e.preventDefault();
-
-        // Here you would typically send the form data to a server
-        // For demo purposes, we'll just show a success message
-        alert("Thank you for your message! I will get back to you soon.");
-        contactForm.reset();
       });
 
       // Animate elements on scroll
